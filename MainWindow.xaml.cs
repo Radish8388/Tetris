@@ -516,10 +516,10 @@ namespace Tetris
 
             string json = JsonSerializer.Serialize(scores);
             string appDataFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            string asteroidsFolder = System.IO.Path.Combine(appDataFolder, "Radish");
-            asteroidsFolder = System.IO.Path.Combine(asteroidsFolder, "Asteroids");
-            string filePath = System.IO.Path.Combine(asteroidsFolder, "highscores.json");
-            Directory.CreateDirectory(asteroidsFolder); // ensure the folder exists first
+            string tetrisFolder = System.IO.Path.Combine(appDataFolder, "Radish");
+            tetrisFolder = System.IO.Path.Combine(tetrisFolder, "Tetris");
+            string filePath = System.IO.Path.Combine(tetrisFolder, "highscores.json");
+            Directory.CreateDirectory(tetrisFolder); // ensure the folder exists first
             File.WriteAllText(filePath, json);
         }
 
