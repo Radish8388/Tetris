@@ -1,0 +1,63 @@
+﻿<Window x:Class="Tetris.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tetris"
+        mc:Ignorable="d"
+        Title="Settings"
+        Height="370" Width="270"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        WindowStyle="ToolWindow">
+    <Grid>
+        <StackPanel Margin="20">
+            
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Sound Effects Volume:" Margin="0,0,20,5"/>
+                <TextBlock x:Name="VolumeText" Text="0" Margin="0,0,0,5"/>
+            </StackPanel>
+            <Slider Name="VolumeSlider" Minimum="0" Maximum="100" Value="50"
+                TickFrequency="1" IsSnapToTickEnabled="True"
+                AutoToolTipPlacement="BottomRight"
+                ValueChanged="VolumeSlider_ValueChanged"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Softer" Margin="0,0,140,0"/>
+                <TextBlock Text="Louder" Margin="0,0,0,0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Starting Level:" Margin="0,30,20,5"/>
+                <TextBlock x:Name="LevelText" Text="1" Margin="0,30,0,5"/>
+            </StackPanel>
+            <Slider Name="LevelSlider" Minimum="1" Maximum="25" Value="1" 
+                TickFrequency="1" IsSnapToTickEnabled="True"
+                AutoToolTipPlacement="BottomRight"
+                ValueChanged="LevelSlider_ValueChanged"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Easier" Margin="0,0,140,0"/>
+                <TextBlock Text="Harder" Margin="0,0,0,0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Number Of Tetrominos:" Margin="0,30,20,5"/>
+                <TextBlock x:Name="TetrominosText" Text="7" Margin="0,30,0,5"/>
+            </StackPanel>
+            <Slider Name="TetrominosSlider" Minimum="1" Maximum="7" Value="7" 
+                TickFrequency="1" IsSnapToTickEnabled="True"
+                AutoToolTipPlacement="BottomRight"
+                ValueChanged="TetrominosSlider_ValueChanged"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Easier" Margin="0,0,145,0"/>
+                <TextBlock Text="Harder" Margin="0,0,0,0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Button Content="OK" Click="OkButton_Click" Width="60" Margin="0,30,30,0" IsDefault="True"/>
+                <Button Content="Cancel" Click="CancelButton_Click" Width="60" Margin="0,30,0,0" IsCancel="True"/>
+            </StackPanel>
+
+        </StackPanel>
+
+    </Grid>
+</Window>

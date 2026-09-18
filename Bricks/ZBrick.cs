@@ -1,0 +1,19 @@
+﻿using Tetris.Enums;
+
+namespace Tetris.Bricks
+{
+    class ZBrick : Tetromino
+    {
+       private readonly Cell[][] originalTiles = new Cell[][]
+       {
+            new Cell[] { new Cell(0,0), new Cell(0,1), new Cell(1,1), new Cell(1,2) },
+            new Cell[] { new Cell(0,2), new Cell(1,1), new Cell(1,2), new Cell(2,1) },
+            new Cell[] { new Cell(1,0), new Cell(1,1), new Cell(2,1), new Cell(2,2) },
+            new Cell[] { new Cell(0,1), new Cell(1,0), new Cell(1,1), new Cell(2,0) }
+       };
+
+        protected override Cell[][] BlueprintTiles => originalTiles;
+        protected override Cell StartOffset => new Cell(0, 3);
+        public override TetrominoShape Type => TetrominoShape.Z;
+    }
+}

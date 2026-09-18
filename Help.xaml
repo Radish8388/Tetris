@@ -1,0 +1,90 @@
+﻿<Window x:Class="Tetris.Help"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tetris"
+        mc:Ignorable="d"
+        Title="Help"
+        Height="400" Width="500"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        WindowStyle="ToolWindow">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <ScrollViewer Grid.Row="0" VerticalScrollBarVisibility="Auto">
+            <StackPanel Margin="5,5,5,20">
+
+                <TextBlock FontWeight="Bold" Margin="0,0,0,5"
+                    Text="About Tetris"/>
+                <TextBlock TextWrapping="Wrap" Margin="0,0,0,10"
+                    Text="Tetris is a puzzle video game created by Alexey Pajitnov in the mid-1980s. In Tetris, falling pieces consisting of four connected blocks, known as tetrominoes, must be sorted into a pile. Once a horizontal line of the playfield is filled with blocks, the line disappears, granting points and preventing the pile from reaching the top."/>
+
+                <TextBlock FontWeight="Bold" Margin="0,0,0,5"
+                    Text="Gameplay"/>
+                <TextBlock TextWrapping="Wrap" Margin="0,0,0,10"
+                    Text="Gameplay consists of a rectangular field in which pieces consisting of four connected blocks, called tetrominoes, descend one at a time from the top-center. During the descent, the player can move the piece horizontally and rotate it until it touches the bottom of the field or another piece. The player's goal is to stack the pieces in the field to create horizontal lines of blocks. When a line is completed, it disappears and the blocks placed above fall one row. The speed of the descending pieces increases as lines are cleared. The game ends if the accumulated pieces in the field block other pieces from entering the field, a process known as &quot;topping out&quot;. Common mechanics among Tetris versions include the queue (viewing the pieces that are next to appear), soft drop (increasing the descent of the piece), hard drop (instantly placing the piece as far down as it can go), and holding (reserving a piece for later use)."/>
+                <TextBlock TextWrapping="Wrap" Margin="0,0,0,10"
+                    Text="The objective of Tetris is to collect as many points as possible during a gameplay session by clearing lines. Points gained during gameplay increase with the descent speed. The more lines cleared at once, the higher the score for a line clear. Completing four horizontal lines at once by placing an I-shaped tetromino into a single-column gap is referred to as a &quot;Tetris&quot;; most versions award the highest score for it. The player can also gain points by using hard drops or soft drops. Advanced techniques, include T-spins (spinning a T-shaped tetromino into a blocked gap), perfect clears (emptying the field following a line clear), and combos (clearing lines consecutively)."/>
+
+                <TextBlock FontWeight="Bold" Margin="0,0,0,5"
+                    Text="Keyboard mappings"/>
+                <TextBlock TextWrapping="Wrap" Margin="0,0,0,5"
+                    Text="Left Arrow : move left"/>
+                <TextBlock TextWrapping="Wrap" Margin="0,0,0,5"
+                    Text="Right Arrow : move right"/>
+                <TextBlock TextWrapping="Wrap" Margin="0,0,0,5"
+                    Text="Up Arrow : rotate right"/>
+                <TextBlock TextWrapping="Wrap" Margin="0,0,0,5"
+                    Text="Z : rotate left"/>
+                <TextBlock TextWrapping="Wrap" Margin="0,0,0,5"
+                    Text="Down Arrow : soft drop"/>
+                <TextBlock TextWrapping="Wrap" Margin="0,0,0,5"
+                    Text="Space Bar : hard drop"/>
+                <TextBlock TextWrapping="Wrap" Margin="0,0,0,5"
+                    Text="C : hold piece"/>
+                <TextBlock TextWrapping="Wrap" Margin="0,0,0,10"
+                    Text="Esc : pause the game"/>
+
+                <TextBlock FontWeight="Bold" Margin="0,0,0,5"
+                    Text="Controller mappings"/>
+                <TextBlock TextWrapping="Wrap" Margin="0,0,0,5"
+                    Text="D-Pad Left : move left"/>
+                <TextBlock TextWrapping="Wrap" Margin="0,0,0,5"
+                    Text="D-Pad Right : move right"/>
+                <TextBlock TextWrapping="Wrap" Margin="0,0,0,5"
+                    Text="X : rotate left"/>
+                <TextBlock TextWrapping="Wrap" Margin="0,0,0,5"
+                    Text="B : rotate right"/>
+                <TextBlock TextWrapping="Wrap" Margin="0,0,0,5"
+                    Text="D-Pad Down : soft drop"/>
+                <TextBlock TextWrapping="Wrap" Margin="0,0,0,5"
+                    Text="D-Pad Up : hard drop"/>
+                <TextBlock TextWrapping="Wrap" Margin="0,0,0,5"
+                    Text="Right Shoulder : hold piece"/>
+                <TextBlock TextWrapping="Wrap" Margin="0,0,0,10"
+                    Text="Start : pause the game"/>
+
+                <TextBlock FontWeight="Bold" Margin="0,0,0,5"
+                    Text="Settings"/>
+                <TextBlock TextWrapping="Wrap" Margin="0,0,0,5"
+                    Text="Sound Effects Volume : Set to your preference."/>
+                <TextBlock TextWrapping="Wrap" Margin="0,0,0,5"
+                    Text="Starting Level : Beginners should set this to 1."/>
+                <TextBlock TextWrapping="Wrap" Margin="0,0,0,5"
+                    Text="Number Of Tetronimos : Most can handle 7, but some may want to start with 1 or 2, particularly small children and the elderly."/>
+            </StackPanel>
+
+        </ScrollViewer>
+
+        <CheckBox x:Name="ShowHelpCheckBox" Content="Show this help at startup" Grid.Row="1" HorizontalAlignment="Center" Margin="5"/>
+        <Button Grid.Row="2" Content="OK" Width="60" 
+                Margin="0,10,0,0" HorizontalAlignment="Center"
+                IsDefault="True" Click="OkButton_Click"/>
+    </Grid>
+</Window>
