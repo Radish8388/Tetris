@@ -30,17 +30,20 @@
             <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
         <TextBlock Grid.Row="0" Grid.ColumnSpan="3" Text="High Scores" FontSize="16"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"/>
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"/>
         <TextBlock Grid.Row="1" Grid.Column="0" Text="Rank" FontSize="16"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"/>
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            TextDecorations="Underline"/>
         <TextBlock Grid.Row="1" Grid.Column="1" Text="Score" FontSize="16"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"/>
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            TextDecorations="Underline"/>
         <TextBlock Grid.Row="1" Grid.Column="2" Text="Date" FontSize="16"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"/>
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            TextDecorations="Underline"/>
         <Button Grid.Row="12" Grid.Column="2" Content="OK" IsDefault="True" HorizontalAlignment="Center" VerticalAlignment="Center" Click="okButton_Click" Width="50"/>
     </Grid>
 </Window>
